@@ -1,0 +1,25 @@
+create database clinicamedica;
+USE clinicamedica;
+create table pacientes (
+id_paciente int auto_increment primary key,
+nome int not null,
+telefone varchar(15),
+data_nascimento varchar(10)
+);
+create table medicos (
+id_medico int auto_increment primary key,
+nome int not null,
+especialidade int not null
+);
+create table consultas (
+id_consulta int auto_increment primary key,
+id_paciente int not null,
+id_medico int not null,
+data_consulta varchar(15) not null,
+valor varchar (15) 
+);
+create table receitas (
+id_receita int auto_increment primary key,
+id_consulta int not null,
+descricao_medicamentos text
+);
